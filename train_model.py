@@ -99,21 +99,21 @@ def run_training(model_name, epochs, learning_rate=None):
     full_train_dataset_augmented = CIFAR10(
         root="./data",
         train=True,
-        download=False,
+        download=True,
         transform=train_transform
     )
 
     full_train_dataset_clean = CIFAR10(
         root="./data",
         train=True,
-        download=False,
+        download=True,
         transform=test_transform
     )
     ## test
     test_dataset = CIFAR10(
         root="./data",
         train=False,
-        download=False,
+        download=True,
         transform=test_transform
     )
 
