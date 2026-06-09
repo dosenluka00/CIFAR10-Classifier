@@ -18,9 +18,9 @@ Jednostavni baseline modeli odabrani su s razlogom, netom prije implementacije C
 
 Aksiom za svaki model strojnog učenja je da mora biti bolji od nasumičnog pogađanja. Stoga je kao prvi baseline model implementiran random guesser, koji očekivano postiže accuracy od oko 10.
 
-MLP služi kao klasični baseline za neuronske mreže. Slike su poravnane (*eng.flattened*) u vectore i propagirane kroz potpuno povezane slojeve. Iako ovaj model može korisno naučiti prepoznavanje uzoraka (*eng. pattern recognition*), on ignorira prostornu strukturu (*eng. spatial architecture*) slika.
+MLP služi kao klasični baseline za neuronske mreže. Slike su poravnane (*eng.flattened*) u vektore i propagirane kroz potpuno povezane slojeve. Iako ovaj model može korisno naučiti prepoznavanje uzoraka (*eng. pattern recognition*), on ignorira prostornu strukturu (*eng. spatial architecture*) slika.
 
-Završni je model prilagođena CNN koja se sastoji od konvolucijskih slojeva (*eng. convolutional layers*), objedinjujućih slojeva (*eng. pooling layers*), i potpuno povezanih klasifikacijskih slojeva (*eng. fully connected classification layers*). Za razliku od MLP-a, CNN zadržava prostorne informacije (*eng. spatial information*) i uči ponovno iskoristive vizualne značajke(*eng. features*) kao što su rubovi, teksture i oblici.
+Završni je model prilagođena CNN koja se sastoji od konvolucijskih slojeva (*eng. convolutional layers*), objedinjujućih slojeva (*eng. pooling layers*), i potpuno povezanih klasifikacijskih slojeva (*eng. fully connected classification layers*). Za razliku od MLP-a, CNN zadržava prostorne informacije (*eng. spatial information*) i uči ponovno iskoristive vizualne značajke (*eng. features*) kao što su rubovi, teksture i oblici.
 
 Ova progresija iz MLP-a u CNN omogućava direktnu usporedbu kako infrastrukturne odluke utječu na performanse.
 
@@ -28,7 +28,7 @@ Ova progresija iz MLP-a u CNN omogućava direktnu usporedbu kako infrastrukturne
 
 Predtrenirani backbone poput ResNet18 ili EfficientNet-a bi vjerojatno postigao veću točnost. Međutim, namjerno ga nisam odabrao iz sljedećih razloga:
 
-Najprije, CIFAR-10 skup podataka sadrži slike veličine 32×32 pixela, dok je većina predtreniranih ImageNet modela namijenjena za značajno veće input vrijednosti, stoga bi za korištenje transfer learninga morali dodatno prilagoditi podatke i veličinu slika.
+Najprije, CIFAR-10 skup podataka sadrži slike veličine 32×32 piksela, dok je većina predtreniranih ImageNet modela namijenjena za značajno veće input vrijednosti, stoga bi za korištenje transfer learninga morali dodatno prilagoditi podatke i veličinu slika.
 
 Zatim, zadatak je bio pokazati razumijevanje i inženjerske prakse pri odabiru infrastrukture, a ne oslanjanje na eksterne predtrenirane komponente.
 
@@ -74,7 +74,7 @@ Ova su unaprjeđenja povećali točnost na testnom skupu podatka na 78.46%, bez 
 
 Iz rezultata vidimo da CNN postiže znatno bolju točnost, pritom koristeći znatno manji broj parametara.
 
-Unatoč tomu što MLP ima veći broj parametara, on tretira svaki piksel zasebno, nakon procesa poravnanja slika(*eng. image flattening*).
+Unatoč tomu što MLP ima veći broj parametara, on tretira svaki piksel zasebno, nakon procesa poravnanja slika (*eng. image flattening*).
 
 S druge strane, CNN koristi prostorni lokalitet (*eng. spatial locality*) i dijeljenje težina (*eng. weights sharing*), što ga čini značajno efikasnijim obzirom na broj parametara.
 
@@ -104,5 +104,5 @@ Naposljetku se metapodatci eksperimenta pohranjuju u JSON formatu, što omuguću
 
 Završni model demonstrira da relativno mali CNN kreiran od nule može postići snažne performanse na zadanom skupu podataka, ukoliko je kombiniran sa pedantnim pretprocesiranjem, proširenjem (*eng. augmentation*), prilagođavanjem stope učenja i ranim zaustavljanjem.
 
-Najznačajniji napredak nije ostvaren povećanjem kompleksnosti modela, nego unaprijeđivanjem samog pipeline. Počevši od malo manje od 70% točnosti, performanse su podignute na 78.46% na testnom skupu podataka isključivo kroz bolju pripremu podataka i korištenje dobrih praksi pri procesu treniranja.
+Najznačajniji napredak nije ostvaren povećanjem kompleksnosti modela, nego unaprijeđivanjem samog pipeline-a. Počevši od malo manje od 70% točnosti, performanse su podignute na 78.46% na testnom skupu podataka isključivo kroz bolju pripremu podataka i korištenje dobrih praksi pri procesu treniranja.
 
