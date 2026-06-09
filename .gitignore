@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+data/
+
+outputs/
+
+*.pth
+
+.venv/
+venv/
+
+.vscode/
+.idea/
