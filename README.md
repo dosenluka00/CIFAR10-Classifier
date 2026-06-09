@@ -29,7 +29,6 @@ Konačni CNN model postiže približno \*\*78.46% točnosti na testnom skupu pod
 Za detaljno objašnjenje arhitekturnih odluka, pretprocesiranja podataka, procesa treniranja i analize rezultata pogledati datoteku \*\*REPORT.md\*\*.
 
 
-
 \---
 
 
@@ -186,7 +185,7 @@ Za automatsko treniranje i evaluaciju svih implementiranih modela:
 
 ```bash
 
-python run\_experiments.py
+python run_experiments.py
 
 ```
 
@@ -312,7 +311,6 @@ CNN postiže značajno bolju točnost od MLP modela unatoč manjem broju paramet
 
 
 Luka Došen
-Projekt je razvijen kao dio tehničkog zadatka za poziciju iz Mid AI/ML inženjer.
 
 
 
