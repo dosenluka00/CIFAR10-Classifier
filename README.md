@@ -1,8 +1,8 @@
-\# CIFAR-10 Klasifikacija Slika
+# CIFAR-10 Klasifikacija Slika
 
 
 
-\## Opis projekta
+## Opis projekta
 
 
 
@@ -10,11 +10,11 @@ Ovaj projekt implementira i uspoređuje tri različita pristupa klasifikaciji sl
 
 
 
-\* Random Baseline
+* Random Baseline
 
-\* Multi-Layer Perceptron (MLP)
+* Multi-Layer Perceptron (MLP)
 
-\* Convolutional Neural Network (CNN)
+* Convolutional Neural Network (CNN)
 
 
 
@@ -22,18 +22,18 @@ Cilj projekta nije bio isključivo postići što veću točnost, nego demonstrir
 
 
 
-Konačni CNN model postiže približno \*\*78.46% točnosti na testnom skupu podataka\*\* koristeći isključivo vlastitu arhitekturu treniranu od nule, bez transfer learninga i bez korištenja predtreniranih težina.
+Konačni CNN model postiže približno **78.46% točnosti na testnom skupu podataka** koristeći isključivo vlastitu arhitekturu treniranu od nule, bez transfer learninga i bez korištenja predtreniranih težina.
 
 
 
-Za detaljno objašnjenje arhitekturnih odluka, pretprocesiranja podataka, procesa treniranja i analize rezultata pogledati datoteku \*\*REPORT.md\*\*.
+Za detaljno objašnjenje arhitekturnih odluka, pretprocesiranja podataka, procesa treniranja i analize rezultata pogledati datoteku **REPORT.md**.
 
 
-\---
+---
 
 
 
-\## Instalacija
+## Instalacija
 
 
 
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 
 
-\## Struktura projekta
+## Struktura projekta
 
 
 
@@ -99,11 +99,11 @@ cifar10\_classifier/
 
 
 
-\---
+---
 
 
 
-\## Pokretanje jednog modela
+## Pokretanje jednog modela
 
 
 
@@ -147,11 +147,11 @@ python train.py --model cnn
 
 
 
-\---
+---
 
 
 
-\## Broj epoha
+## Broj epoha
 
 
 
@@ -171,11 +171,11 @@ python train.py --model cnn --epochs 50
 
 
 
-\---
+---
 
 
 
-\## Pokretanje svih eksperimenata
+## Pokretanje svih eksperimenata
 
 
 
@@ -195,21 +195,21 @@ Skripta će redom:
 
 
 
-1\. Pokrenuti Random Baseline
+1. Pokrenuti Random Baseline
 
-2\. Pokrenuti MLP model
+2. Pokrenuti MLP model
 
-3\. Pokrenuti CNN model
+3. Pokrenuti CNN model
 
-4\. Generirati usporednu tablicu rezultata
-
-
-
-\---
+4. Generirati usporednu tablicu rezultata
 
 
 
-\## Generirani izlazi
+---
+
+
+
+## Generirani izlazi
 
 
 
@@ -239,25 +239,25 @@ Unutar svakog direktorija nalaze se:
 
 
 
-\* najbolji spremljeni model (`\*.pth`)
+* najbolji spremljeni model (`\*.pth`)
 
-\* matrica zabune (Confusion Matrix)
+* matrica zabune (Confusion Matrix)
 
-\* krivulja gubitka tijekom treniranja
+* krivulja gubitka tijekom treniranja
 
-\* krivulja validacijske točnosti
+* krivulja validacijske točnosti
 
-\* klasifikacijski izvještaj
+* klasifikacijski izvještaj
 
-\* JSON datoteka s metapodacima eksperimenta
-
-
-
-\---
+* JSON datoteka s metapodacima eksperimenta
 
 
 
-\## Reproducibilnost
+---
+
+
+
+## Reproducibilnost
 
 
 
@@ -265,25 +265,25 @@ Kako bi rezultati bili ponovljivi:
 
 
 
-\* koristi se fiksni slučajni generator (`random seed`)
+* koristi se fiksni slučajni generator (`random seed`)
 
-\* train/validation podjela je deterministička
+* train/validation podjela je deterministička
 
-\* validacijski skup ne koristi data augmentation
+* validacijski skup ne koristi data augmentation
 
-\* najbolji model automatski se sprema tijekom treniranja
+* najbolji model automatski se sprema tijekom treniranja
 
-\* koristi se Early Stopping mehanizam
+* koristi se Early Stopping mehanizam
 
-\* koristi se Learning Rate Scheduler (`ReduceLROnPlateau`)
-
-
-
-\---
+* koristi se Learning Rate Scheduler (`ReduceLROnPlateau`)
 
 
 
-\## Rezultati
+---
+
+
+
+## Rezultati
 
 
 
@@ -303,11 +303,11 @@ CNN postiže značajno bolju točnost od MLP modela unatoč manjem broju paramet
 
 
 
-\---
+---
 
 
 
-\## Autor
+## Autor
 
 
 Luka Došen
